@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e4edfa;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #000;
+}
+
+#app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.app-container {
+  max-width: 550px;
+  padding: 53px 50px;
+  background: #ffffff;
+  border: 1px solid #d6e1f1;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.04);
+  border-radius: 30px;
+}
+
+.app-title {
+  padding-left: 62px;
+  margin-bottom: 34px;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 39px;
+  background-image: url('./img/title-bg.svg');
+  background-repeat: no-repeat;
+  background-size: 54px;
+  background-position: left center;
+}
+
+/* Acordeon styles */
+.tab {
+  position: relative;
+  margin-bottom: 18px;
+  padding-bottom: 18px;
+  width: 100%;
+  overflow: hidden;
+  border-bottom: 1px solid #f3f3f3;
+}
+
+.tab:last-child {
+  border-bottom: 0;
+}
+
+.tab input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+.tab label {
+  position: relative;
+  display: block;
+  background: #fff;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+}
+.blue label {
+  background: #2980b9;
+}
+.tab-content {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.35s;
+  -o-transition: max-height 0.35s;
+  transition: max-height 0.35s;
+}
+.tab-content p {
+  color: #6d6d6d;
+  padding: 14px 0 24px;
+  line-height: 22px;
+}
+/* :active */
+.tab.active .tab-content {
+  max-height: 100vh;
+}
+/* Icon */
+.tab label::after {
+  position: absolute;
+  content: '';
+  width: 16px;
+  height: 10px;
+  background-image: url('./img/arrow-tab.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px;
+  right: 0;
+  top: 0px;
+  display: block;
+  line-height: 3;
+  text-align: center;
+  -webkit-transition: all 0.35s;
+  -o-transition: all 0.35s;
+  transition: all 0.35s;
+}
+
+.tab.active label::after {
+  transform: rotate(180deg);
+}
