@@ -35,7 +35,8 @@ function Form() {
         justifyContent: "space-around",
         gap: "15px",
         p: "16px",
-      }}>
+      }}
+    >
       <Typography variant="h6" sx={{ fontWeight: "bold" }}>
         Обратная связь:
       </Typography>
